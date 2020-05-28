@@ -1,3 +1,4 @@
+<script src="/libraries/jquery-3.5.1.js"></script>
 <html>
 <head>
     <title> Seyahat Uygulaması </title>
@@ -21,6 +22,32 @@
                <li><a href="#" type="notAMember" onclick="navigateToHomePage()">Üye Olmadan Devam Et</a> </li>
             </ul>
             </form>
+        
+    </div>
+        
+    <div class="signup-box" id="idSignUp">
+        <img src="/images/avatar.png" class="avatar">
+        
+        <div class="visiterSignUpForm">Okuyucu</div>
+        <div class="travellerSignUpForm">Gezgin</div>
+        
+        <div class="travellerSignUpForm-form">
+        
+         <p>Adınız: </p>
+            <input type="text" name="name" >
+            <p>Soyadınız:</p>
+            <input type="text" name="surname" >
+            <p>E-posta:</p>
+            <input type="text" name="username" >
+            <p>Şifreniz:</p>
+            <input type="password" name="password" >
+            <p>Şifre (Tekrar):</p>
+            <input type="password" name="password" >
+            <input class ="submit" type="submit" name="submit" value="Tamamla" onclick="onClickSubmit()">
+            <input class="continue" type="submit" name="continue" value="Devam Et" onclick="onClickContinue()">
+         
+       </div>
+         
         
     </div>
         
