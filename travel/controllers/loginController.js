@@ -1,10 +1,9 @@
+
 //This is the init function
 (function(){        
-   // document.getElementById("idSignUp").disabled = true;
-    console.log('2');
-    $(".login-box").hide();
+    console.log('init');
+    $(".signup-box").hide();
 })();
-
 
 
 function navigateToHomePage()
@@ -17,10 +16,6 @@ function navigateToHomePage()
   } 
 }
 
-function onClickSignUp(){
-  //  document.getElementById("idSignIn").disabled = true;
-    console.log('4');
-}
 
 function onClickLogin(){
     //todo: giriş bilgilerini kontrol et backend servisi ile
@@ -29,5 +24,40 @@ function onClickLogin(){
     if(response == 'ok'){
        alert('Giriş başarılı!');
        window.location.href = "homepage.html";
+        
     }
+}
+
+
+function onClickSignUp(){
+  
+    console.log('4');
+    $(".login-box").hide();
+    $(".signup-box").show();
+    
+    $(".travellerSignUpForm").css("background", "#A9A9A9");
+    $(".continue").hide();
+}
+
+$(".visiterSignUpForm").click(function(){
+  $(".travellerSignUpForm").css("background", "#A9A9A9");
+  $(".visiterSignUpForm").css("background", "#fff");
+    $(".continue").hide();
+    $(".submit").show();
+});
+
+$(".travellerSignUpForm").click(function(){
+  $(".visiterSignUpForm").css("background", "#A9A9A9");
+  $(".travellerSignUpForm").css("background", "#fff");
+    $(".submit").hide();
+    $(".continue").show();
+});
+
+function onClickSubmit(){
+    //todo: üyeyi kaydet.
+    alert('Anasayfaya yönlendiriliyorsunuz!');
+    window.location.href = "homepage.html";
+}
+function onClickContinue(){
+    //todo: profil oluşturma sayfası
 }
